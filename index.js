@@ -19,6 +19,7 @@ for (const file of commandFiles) {
 //Ready 
 client.once('ready', () => {
     console.log('Ready!');
+    client.user.setActivity('Usa paz!help para ver los comandos', { type: 'playing' });  //Custom status
 })
 
 //Commands

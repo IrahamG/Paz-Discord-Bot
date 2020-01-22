@@ -9,7 +9,9 @@ module.exports = {
     cooldown: 5,
     execute(message, args) {
 
-        var songUrl = args[1];
+        message.reply('Este comando se encuentra de momento fuera de servicio');
+
+        /*var songUrl = args[1];
 
         async function play(message, serverQueue) {
          
@@ -77,6 +79,6 @@ module.exports = {
             dispatcher.setVolumeLogarithmic(serverQueue.volume / 5);
         }
 
-
-    }
-}
+        */
+    } 
+} 

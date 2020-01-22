@@ -9,6 +9,7 @@ module.exports = {
     usage: '<ID de usuario>',
     cooldown: 5,
     execute(message, args) {
+        //Si el usuario no tiene permisos no puede ejecutar el comando
         if (!message.member.hasPermission(['BAN_MEMBERS', 'ADMINISTRATOR'])) return message.reply('No tienes los permisos para hacer eso amiguito');
         let bannedMember = args[0];  //Guarda el ID en una variable
         message.guild.unban(bannedMember).then((bannedMember) => {   //Desbanea el ID guardado
