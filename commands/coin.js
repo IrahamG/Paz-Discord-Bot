@@ -12,14 +12,14 @@ module.exports = {
             //Envia el mensaje correspondiente dependiendo del resultado
             switch(randomNumber) {
                 case 1:
-                    const coinMessage = new Discord.RichEmbed()
+                    var coinMessage = new Discord.RichEmbed()
                         .setColor('#ff87d9')
                         .setTitle('**Coinflip**')
                         .setDescription('Cara!');
                     message.channel.send(coinMessage);
                     break;
                 case 2:
-                    const coinMessage = new Discord.RichEmbed()
+                    var coinMessage = new Discord.RichEmbed()
                         .setColor('#ff87d9')
                         .setTitle('**Coinflip**')
                         .setDescription('Cruz!');

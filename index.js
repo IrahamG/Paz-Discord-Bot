@@ -19,8 +19,20 @@ for (const file of commandFiles) {
 //Ready 
 client.once('ready', () => {
     console.log('Ready!');
-    client.user.setActivity('Usa paz!help para ver los comandos', { type: 'playing' });  //Custom status
-})
+
+    let statuses = [
+        `En ${client.guilds.size}/10 servidores!`,
+        `Usa paz!help para ver los comandos`,
+        `${client.users.size} usuarios!`
+    ]
+
+    setInterval(function() {
+        let status = statuses[Math.floor(Math.random() * statuses.length)];
+        client.user.setActivity(status, { type: 'playing' });
+    }, 60000);
+
+    
+});
 
 //Commands
 client.on('message', message => {
