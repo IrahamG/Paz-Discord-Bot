@@ -1,14 +1,7 @@
 /*This command removes the ban status from a member in the server*/ 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-module.exports = {
-    name: 'unban',
-    description: 'Elimina el ban de un miembro',
-    guildOnly: true,
-    args: true,
-    usage: '<ID de usuario>',
-    cooldown: 5,
-    execute(message, args) {
+module.exports.run = async(client, message, args) => {
         //Si el usuario no tiene permisos no puede ejecutar el comando
         if (!message.member.hasPermission(['BAN_MEMBERS', 'ADMINISTRATOR'])) return message.reply('No tienes los permisos para hacer eso amiguito');
         let bannedMember = args[0];  //Guarda el ID en una variable
@@ -26,4 +19,12 @@ module.exports = {
         })   
         
     }
+
+module.exports.config = {
+    name: 'unban',
+    description: 'Elimina el ban de un miembro',
+    guildOnly: true,
+    args: true,
+    usage: '<ID de usuario>',
+    cooldown: 5
 }

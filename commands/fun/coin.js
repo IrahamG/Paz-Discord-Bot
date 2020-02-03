@@ -1,11 +1,6 @@
 //Lanza una moneda y arroja el resultado: Cara o cruz
 const Discord = require('discord.js');
-module.exports = {
-    name: 'coin',
-    description: 'Lanza una moneda',
-    guildOnly: true,
-    cooldown: 8,
-    execute(message, args) {
+module.exports.run = async(client, message, args) => {
         try{
             //Genera un numero aleatorio entre uno y dos
             const randomNumber = Math.floor(Math.random() * (3 - 1)) + 1;
@@ -33,4 +28,10 @@ module.exports = {
             console.log(error);
         }
     }
+
+module.exports.config = {
+    name: 'coin',
+    description: 'Lanza una moneda',
+    guildOnly: true,
+    cooldown: 5
 }

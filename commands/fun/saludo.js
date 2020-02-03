@@ -1,10 +1,7 @@
 /*The command sends a greeting to everyone if its used without arguments. If a user is tagged with the command
 it sends a personal greeting to the user*/
 const Discord = require('discord.js');
-module.exports = {
-    name: 'saludo',
-    description: 'saludo para el usuario etiquetado',
-    execute(message, args){
+module.exports.run = async(client, message, args) => {
         //If there's no one tagged
         if(!message.mentions.users.size) {
             const saludoGeneral = new Discord.RichEmbed()
@@ -19,6 +16,10 @@ module.exports = {
             .addField(`**Paz saluda a ${taggedMemeber.displayName}**`, 'Hello beautiful! :heart:');
         message.channel.send(saludoIndiv);
         //message.channel.send('Hola ' + taggedMemeber.displayName + '! :heart:');
-    },
+    }
 
-};
+
+module.exports.config = {
+    name: 'saludo',
+    description: 'saludo para el usuario etiquetado'
+}

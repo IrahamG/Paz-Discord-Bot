@@ -1,13 +1,6 @@
 /*Moderation command. Kicks the tagged user and provides a motive for the kick*/
 const Discord = require('discord.js');
-module.exports = {
-    name: 'kick',
-    description: 'Expulsa al miembro seleccionado',
-    guildOnly: true,
-    args: true,
-    usage: '<Nombre de usuario> <Motivo de la expulsion>',
-    cooldown: 5,
-    execute(message, args) {
+module.exports.run = async(client, message, args) => {
         const user = message.mentions.users.first(); //Saves the tagged username
 
         if(message.member.hasPermission(['KICK_MEMBERS', 'BAN_MEMBERS'])){  //Only admin users can use the command
@@ -40,4 +33,12 @@ module.exports = {
         }    
     },
 
-};
+
+module.exports.config = {
+    name: 'kick',
+    description: 'Expulsa al miembro seleccionado',
+    guildOnly: true,
+    args: true,
+    usage: '<Nombre de usuario> <Motivo de la expulsion>',
+    cooldown: 5
+}

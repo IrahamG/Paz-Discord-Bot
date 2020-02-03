@@ -1,13 +1,6 @@
 /*The command bans the tagged user from the server*/ 
 const Discord = require('discord.js');
-module.exports = {
-    name: 'ban',
-    desription: 'Banea al miembro seleccionado',
-    guildOnly: true,
-    args: true,
-    usage: '<Nombre de usuario> <Motivo del ban>',
-    cooldown: 5,
-    execute(message, args) {
+module.exports.run = async(client, message, args) => {
         const user = message.mentions.users.first();
         //Works only if the member has permission to use ban commands
         if(message.member.hasPermission(['BAN_MEMBERS'])) {
@@ -35,4 +28,12 @@ module.exports = {
             message.reply('No tienes los permisos para hacer eso amiguito');
         }
     }
+
+module.exports.config = {
+    name: 'ban',
+    desription: 'Banea al miembro seleccionado',
+    guildOnly: true,
+    args: true,
+    usage: '<Nombre de usuario> <Motivo del ban>',
+    cooldown: 5
 }
