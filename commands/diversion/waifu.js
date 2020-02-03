@@ -1,13 +1,8 @@
 const Discord = require('discord.js');
 
-module.exports = {
-    name: 'waifu',
-    description: 'Muestra una waifu de videojuegos al azar',
-    guildOnly: true,
-    cooldown: 8,
-    execute(message, args) {
+module.exports.run = async(client, message, args) =>{
             //Importa los datos de las imagenes
-            const ImageData = require('../image_data.js');
+            const ImageData = require('../../image_data.js');
 
             //Diccionarios de los nombres y los titulos
             const namesDic = {1:String(ImageData.name1), 2:String(ImageData.name2), 3:String(ImageData.name3), 4:String(ImageData.name4),
@@ -36,4 +31,11 @@ module.exports = {
 
         
     }
+
+module.exports.config = {
+    name: 'waifu',
+    description: 'Muestra una waifu de videojuegos al azar',
+    category: 'diversion',
+    guildOnly: true,
+    cooldown: 8
 }
