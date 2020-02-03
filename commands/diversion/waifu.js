@@ -35,6 +35,7 @@ module.exports.run = async(client, message, args) =>{
 module.exports.config = {
     name: 'waifu',
     description: 'Muestra una waifu de videojuegos al azar',
+    category: 'diversion',
     guildOnly: true,
     cooldown: 8
 }

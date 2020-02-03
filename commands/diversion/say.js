@@ -16,6 +16,7 @@ module.exports.run = async(client, message, args) => {
 module.exports.config = {
     name: 'say',
     description: 'Paz dice lo que tu quieras que diga',
+    category: 'diversion',
     args: true,
     usage: '<Dialogo>',
     cooldown: 5

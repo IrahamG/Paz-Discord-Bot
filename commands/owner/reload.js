@@ -23,5 +23,7 @@ module.exports.run = async(client, message, args) => {
 module.exports.config = {
     name: 'reload',
     description: 'Recarga un comando',
-    args: true
+    category: 'owner',
+    args: true,
+    access: 'Dueño del bot'
 }

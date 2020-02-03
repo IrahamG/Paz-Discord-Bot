@@ -31,6 +31,7 @@ module.exports.run = async(client, message, args) => {
 module.exports.config = {
     name: 'poll',
     description: 'Crea una encuesta rapida',
+    category: 'diversion',
     guildOnly: true,
     usage: '<Nombre de la encuesta>',
     cooldown: 5

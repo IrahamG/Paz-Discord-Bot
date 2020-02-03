@@ -19,7 +19,7 @@ module.exports.run = async(client, message, args) => {
                 const warnMessage = new Discord.RichEmbed() 
                     .setColor('#ff87d9')
                     .setTitle('**ADVERTENCIA**')
-                    .setAuthor('Paz', 'https://cdnb.artstation.com/p/assets/images/images/000/194/923/large/fahad-khan-metal-gear-artwork-19597.jpg?1409984106', '')
+                    .setAuthor('Paz', client.user.displayAvatarURL, '')
                     .addField('Usuario', `${user}`, true)
                     .addField('Motivo', `${motivo}`, true)
                     .setTimestamp();
@@ -37,8 +37,9 @@ module.exports.run = async(client, message, args) => {
 module.exports.config = {
     name: 'warn',
     description: 'Advierte a un usuario',
+    category: 'moderacion',
     guildOnly: true,
     args: true,
     usage: '<Nombre de usuario> <Motivo de advertencia>',
-    cooldown: 5
+    access: 'Moderadores'
 }

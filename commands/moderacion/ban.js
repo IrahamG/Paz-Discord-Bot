@@ -12,7 +12,7 @@ module.exports.run = async(client, message, args) => {
                         const banMessage = new Discord.RichEmbed()   //Embed constructor
                             .setColor('#ff87d9')
                             .setTitle('**REPORTE DE BAN**')
-                            .setAuthor('Paz', 'https://cdnb.artstation.com/p/assets/images/images/000/194/923/large/fahad-khan-metal-gear-artwork-19597.jpg?1409984106', '')
+                            .setAuthor('Paz', client.user.displayAvatarURL, '')
                             .addField('Usuario', `${user}`, true)
                             .addField('Moderador', `${message.author}`, true)
                             .addField('Motivo', `${motivo}`, true)
@@ -31,9 +31,10 @@ module.exports.run = async(client, message, args) => {
 
 module.exports.config = {
     name: 'ban',
-    desription: 'Banea al miembro seleccionado',
+    description: 'Banea al miembro seleccionado',
+    category: 'moderacion',
     guildOnly: true,
     args: true,
     usage: '<Nombre de usuario> <Motivo del ban>',
-    cooldown: 5
+    access: 'Moderadores'
 }

@@ -11,7 +11,8 @@ client.once('ready', () => {
     let statuses = [
         `En ${client.guilds.size}/10 servidores!`,
         `Usa paz!help para ver los comandos`,
-        `${client.users.size} usuarios!`
+        `${client.users.size} usuarios!`,
+        `Versión 0.6 REX | paz!changelog`
     ]
 
     setInterval(function() {

@@ -40,6 +40,7 @@ module.exports.run = async(client, message, args) => {
 module.exports.config = {
     name: 'dice',
     description: 'Lanza un dado de tu eleccion y obtén el resultado',
+    category: 'diversion',
     args: true,
     usage: '<Numero de caras (4/6/8/10/12/20)>',
     cooldown: 5

@@ -32,6 +32,7 @@ module.exports.run = async(client, message, args) => {
 module.exports.config = {
     name: 'coin',
     description: 'Lanza una moneda',
+    category: 'diversion',
     guildOnly: true,
     cooldown: 5
 }

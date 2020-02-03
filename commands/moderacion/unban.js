@@ -9,7 +9,7 @@ module.exports.run = async(client, message, args) => {
             const unbanMessage = new Discord.RichEmbed()   //Embed message constructor
                 .setColor('#ff87d9')
                 .setTitle('**DESBANEO**')
-                .setAuthor('Paz', 'https://cdnb.artstation.com/p/assets/images/images/000/194/923/large/fahad-khan-metal-gear-artwork-19597.jpg?1409984106', '')
+                .setAuthor('Paz', client.user.displayAvatarURL, '')
                 .addField('FELICIDADES', `El usuario ${bannedMember} ha sido desbaneado, por favor ahora portate bien, corazón`)
                 .setTimestamp();
             message.channel.send(unbanMessage);
@@ -23,8 +23,9 @@ module.exports.run = async(client, message, args) => {
 module.exports.config = {
     name: 'unban',
     description: 'Elimina el ban de un miembro',
+    category: 'moderacion',
     guildOnly: true,
     args: true,
     usage: '<ID de usuario>',
-    cooldown: 5
+    access: 'Moderadores'
 }

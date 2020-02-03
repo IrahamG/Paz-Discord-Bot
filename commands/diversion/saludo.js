@@ -21,5 +21,7 @@ module.exports.run = async(client, message, args) => {
 
 module.exports.config = {
     name: 'saludo',
-    description: 'saludo para el usuario etiquetado'
+    description: 'saludo para el usuario etiquetado',
+    category: 'diversion',
+    usage: '<Usuario>'
 }
