@@ -10,27 +10,31 @@ module.exports.run = async(client, message, args) => {
         switch (args[0]) {
             case '4':
                 var diceResult = Math.floor(Math.random() * (5 - 1)) + 1;
-                message.channel.send(`El resultado del tiro es: ${diceResult}`);
+                message.channel.send(`El resultado del tiro es: ${diceResult} :game_die:`);
                 break;
             case '6':
                 var diceResult = Math.floor(Math.random() * (7 - 1)) + 1;
-                message.channel.send(`El resultado del tiro es: ${diceResult}`);
+                message.channel.send(`El resultado del tiro es: ${diceResult} :game_die:`);
                 break;
             case '8':
                 var diceResult = Math.floor(Math.random() * (9 - 1)) + 1;
-                message.channel.send(`El resultado del tiro es: ${diceResult}`);
+                message.channel.send(`El resultado del tiro es: ${diceResult} :game_die:`);
                 break;
             case '10':
                 var diceResult = Math.floor(Math.random() * (11 - 1)) + 1;
-                message.channel.send(`El resultado del tiro es: ${diceResult}`);
+                message.channel.send(`El resultado del tiro es: ${diceResult} :game_die:`);
                 break;
             case '12':
                 var diceResult = Math.floor(Math.random() * (13 - 1)) + 1;
-                message.channel.send(`El resultado del tiro es: ${diceResult}`);
+                message.channel.send(`El resultado del tiro es: ${diceResult} :game_die:`);
                 break;
             case '20':
                 var diceResult = Math.floor(Math.random() * (21 - 1)) + 1;
-                message.channel.send(`El resultado del tiro es: ${diceResult}`);
+                if(diceResult == 20) {
+                    message.channel.send('¡20! **¡Golpe critico!**');
+                } else {
+                    message.channel.send(`El resultado del tiro es: ${diceResult} :game_die:`);
+                }
                 break;
             default:
                 break;

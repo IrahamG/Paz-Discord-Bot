@@ -1,6 +1,9 @@
 /*Moderation command. Kicks the tagged user and provides a motive for the kick*/
 const Discord = require('discord.js');
 module.exports.run = async(client, message, args) => {
+
+        if (!args[0]) return message.reply('No has proporcionado un usuario');
+
         const user = message.mentions.users.first(); //Saves the tagged username
 
         if(message.member.hasPermission(['KICK_MEMBERS', 'BAN_MEMBERS'])){  //Only admin users can use the command
@@ -8,7 +11,8 @@ module.exports.run = async(client, message, args) => {
                 const member = message.guild.member(user); //Verifies if the user is on the server
                 if (member) {
                     member.kick().then((member) => {  //Kicks the user
-                        const motivo = args.join(' ').slice(22);
+                        let motivo = args.join(' ').slice(22);
+                        if(!motivo) motivo = 'Sin motivo aparente';
                         const kickMessage = new Discord.RichEmbed()  //Creates an Embed Object 
                             //Customization options
                             .setColor('#ff87d9')

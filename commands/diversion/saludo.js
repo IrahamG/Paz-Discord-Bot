@@ -10,6 +10,7 @@ module.exports.run = async(client, message, args) => {
             return message.channel.send(saludoGeneral);
         }
         //Saves the first tagged member in the message and then sends the personal greeting
+        message.delete();
         let taggedMemeber = message.mentions.members.first();
         const saludoIndiv = new Discord.RichEmbed()
             .setColor('#ff87d9')
