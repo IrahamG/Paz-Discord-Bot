@@ -4,19 +4,13 @@ const Discord = require('discord.js');
 module.exports.run = async(client, message, args) => {
         //If there's no one tagged
         if(!message.mentions.users.size) {
-            const saludoGeneral = new Discord.RichEmbed()
-                .setColor('#ff87d9')
-                .addField('**Paz saluda**', 'Hola hemoshos! :heart:');
-            return message.channel.send(saludoGeneral);
+            return message.channel.send('Hola hemoshos! :heart:');
         }
         //Saves the first tagged member in the message and then sends the personal greeting
         message.delete();
         let taggedMemeber = message.mentions.members.first();
-        const saludoIndiv = new Discord.RichEmbed()
-            .setColor('#ff87d9')
-            .addField(`**Paz saluda a ${taggedMemeber.displayName}**`, 'Hello beautiful! :heart:');
-        message.channel.send(saludoIndiv);
-        //message.channel.send('Hola ' + taggedMemeber.displayName + '! :heart:');
+        message.channel.send(`Hola ${taggedMemeber.user}, hoy luces radiante! :heart:`);
+      
     }
 
 
