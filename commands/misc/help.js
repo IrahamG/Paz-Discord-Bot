@@ -5,13 +5,13 @@ const { readdirSync } = require('fs');
 module.exports.run = async(client, message, args) => {
     const embed = new RichEmbed()
         .setColor('#ff87d9')
-        .setAuthor('Listado de comandos de Paz', client.user.displayAvatarURL, '')
+        .setAuthor('Ayuda', client.user.displayAvatarURL, '')
         .setThumbnail(client.user.displayAvatarURL)
 
         if(!args[0]) {
             const categories = readdirSync('./commands/')
 
-            embed.setDescription(`Estos son los comandos disponibles para ${message.guild.me.displayName}\n El prefijo es: **${prefix}**`)
+            embed.setDescription(`Para más información sobre un comando, utiliza paz!help [Comando]\n El prefijo es: **${prefix}**`)
             embed.setFooter(`© Paz Bot | Commandos totales: ${client.commands.size}`, client.user.displayAvatarURL)
 
             categories.forEach(category => {

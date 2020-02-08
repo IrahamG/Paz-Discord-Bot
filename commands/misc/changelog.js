@@ -1,3 +1,4 @@
+//Regresa un mensaje con los cambios de la version principal.
 const Discord = require('discord.js');
 module.exports.run = async(client, message, args) => {
         const changeMessage = new Discord.RichEmbed()
@@ -5,7 +6,7 @@ module.exports.run = async(client, message, args) => {
             .setAuthor('Changelog', client.user.displayAvatarURL, '')
             .setThumbnail(client.user.displayAvatarURL)
             .addField('Cambios en la version 0.6 | Codename: REX', 
-                `+Nuevos comandos: \`dice\`, \`mute\`, \`unmunte\`, y \`changelog\`. 
+                `+Nuevos comandos: \`dice\`, \`mute\`, \`unmute\`, y \`changelog\`. 
                 \n+Se ha cambiado el motor de manejo de comandos, mejorando la optimizacion.
                 \n+Se han modificado los comandos para adaptarse al nuevo motor. 
                 \n+El comando de paz!help ha sido modificado.

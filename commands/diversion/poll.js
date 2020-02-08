@@ -10,9 +10,10 @@ module.exports.run = async(client, message, args) => {
             const pollDescription = args.join(' ');
             const pollMessage = new Discord.RichEmbed()
                 .setColor('#ff87d9')
-                .setFooter('Reaccionen para votar linduras')
+                .setFooter('*I love democracy*', client.user.displayAvatarURL)
                 .setDescription(`📋 ${pollDescription}`)
                 .setTitle(`**Encuesta creada por ${message.author.username}**`);
+
 
             //Envia el mensaje despues de ser creado
             let msg = await message.channel.send(pollMessage);

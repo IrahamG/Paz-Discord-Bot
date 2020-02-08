@@ -3,8 +3,10 @@ const Discord = require('discord.js');
 module.exports.run = async(client, message, args) => {
         const infoMessage = new Discord.RichEmbed()
             .setColor('#ff87d9')
-            .setTitle('**Hola, Soy Paz!**')
-            .addField('Acerca de mi:', 'Fui creada el 14/01/2020, actualmente me encuentro en la version 0.6, mi padre es ChaosNeon, visita su Twitter y Github para mas!');
+            .setAuthor('Informacion tecnica de Paz', client.user.displayAvatarURL, '')
+            .setThumbnail(client.user.displayAvatarURL)
+            .setDescription('Paz se encuentra actualmente en la versión 0.6.2')
+            .addField('Codigo', `\`Lenguaje: Javascript \nLibreria: Node.js | Discord.js\``);
         message.channel.send(infoMessage);
     },
 

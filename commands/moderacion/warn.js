@@ -1,3 +1,4 @@
+//Crea una advertencia para el usuario seleccionado
 const Discord = require('discord.js');
 module.exports.run = async(client, message, args) => {
         const user = message.mentions.users.first();  //Guarda el usuario etiquetado en una constante
@@ -13,7 +14,7 @@ module.exports.run = async(client, message, args) => {
                 let motivo = args.join(" ").slice(22);   //Guarda el motivo dentro de una constante
 
                 if(!motivo) {
-                    motivo = 'Sin motivo proporcionado'
+                    motivo = 'Sin motivo aparente'
                 }
                 //Crea el embed de advertencia 
                 const warnMessage = new Discord.RichEmbed() 
