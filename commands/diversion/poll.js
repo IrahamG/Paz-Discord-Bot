@@ -35,5 +35,4 @@ module.exports.config = {
     category: 'diversion',
     guildOnly: true,
     usage: '<Nombre de la encuesta>',
-    cooldown: 5
 }

@@ -11,6 +11,9 @@ module.exports.run = async(client, message, args) => {
                 const member = message.guild.member(user); //Verifies if the user is on the server
                 if (member) {
                     member.kick().then((member) => {  //Kicks the user
+
+                        message.delete();
+
                         let motivo = args.join(' ').slice(22);
                         if(!motivo) motivo = 'Sin motivo aparente';
                         const kickMessage = new Discord.RichEmbed()  //Creates an Embed Object 

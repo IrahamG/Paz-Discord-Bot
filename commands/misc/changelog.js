@@ -5,12 +5,12 @@ module.exports.run = async(client, message, args) => {
             .setColor('#ff87d9')
             .setAuthor('Changelog', client.user.displayAvatarURL, '')
             .setThumbnail(client.user.displayAvatarURL)
-            .addField('Cambios en la version 0.6 | Codename: REX', 
-                `+Nuevos comandos: \`dice\`, \`mute\`, \`unmute\`, y \`changelog\`. 
-                \n+Se ha cambiado el motor de manejo de comandos, mejorando la optimizacion.
-                \n+Se han modificado los comandos para adaptarse al nuevo motor. 
-                \n+El comando de paz!help ha sido modificado.
-                \n-Comando play deshabilitado *temporalmente*`)
+            .addField('Cambios en la version 0.8.0 | Codename: REX', 
+                `+Nuevos comandos: \`rps\`, y \`fortune\`. 
+                \n+Cambios en el comando de \`waifu\`, otra vez.
+                \n+Cambios menores en otros comandos
+                \n+Nuevo sitio web: chaosneon.weebly.com
+                \n+Primer lanzamiento publico`)
             .setFooter('ChaosNeon | 2019 - 2020');
         message.channel.send(changeMessage);
     }
