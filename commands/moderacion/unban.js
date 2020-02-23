@@ -6,6 +6,9 @@ module.exports.run = async(client, message, args) => {
         if (!message.member.hasPermission(['BAN_MEMBERS', 'ADMINISTRATOR'])) return message.reply('No tienes los permisos para hacer eso amiguito');
         let bannedMember = args[0];  //Guarda el ID en una variable
         message.guild.unban(bannedMember).then((bannedMember) => {   //Desbanea el ID guardado
+
+            message.delete();
+
             const unbanMessage = new Discord.RichEmbed()   //Embed message constructor
                 .setColor('#ff87d9')
                 .setTitle('**DESBANEO**')

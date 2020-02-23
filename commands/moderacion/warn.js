@@ -11,6 +11,7 @@ module.exports.run = async(client, message, args) => {
         if(user) {
             const member = message.guild.member(user);  //Guarda el miembro y lo convierte a usuario
             if(member) {
+                
                 let motivo = args.join(" ").slice(22);   //Guarda el motivo dentro de una constante
 
                 if(!motivo) {
@@ -30,6 +31,8 @@ module.exports.run = async(client, message, args) => {
                     message.reply('No pude advertir al miembro, sorry');
                     console.error(error);
                 }
+
+                message.delete();
                 
             }
         }

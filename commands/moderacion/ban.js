@@ -11,8 +11,12 @@ module.exports.run = async(client, message, args) => {
                 const member = message.guild.member(user);   //Saves the user in a constant named member 
                 if (member) {
                     member.ban().then((member) => {
+
+                        message.delete();
+
                         let motivo = args.join(' ').slice(22);
                         if(!motivo) motivo = 'Sin motivo aparente';
+
                         const banMessage = new Discord.RichEmbed()   //Embed constructor
                             .setColor('#ff87d9')
                             .setTitle('**REPORTE DE BAN**')
@@ -21,6 +25,7 @@ module.exports.run = async(client, message, args) => {
                             .addField('Moderador', `${message.author}`, true)
                             .addField('Motivo', `${motivo}`, true)
                             .setTimestamp();
+
                         message.channel.send(banMessage);
                     }).catch(error => {
                         message.reply('No pude banear al miembro, sorry');

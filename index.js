@@ -12,7 +12,7 @@ client.once('ready', () => {
         `En ${client.guilds.size}/10 servidores!`,
         `Usa paz!help para ver los comandos`,
         `${client.users.size} usuarios!`,
-        `Versión 0.6.2 REX | paz!changelog`
+        `Versión 0.8.0 REX | paz!changelog`
     ]
 
     setInterval(function() {

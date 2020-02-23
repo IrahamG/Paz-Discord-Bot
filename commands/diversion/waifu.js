@@ -1,26 +1,20 @@
 const Discord = require('discord.js');
 
 module.exports.run = async(client, message, args) =>{
-            //Importa los datos de las imagenes
-            const ImageData = require('../../image_data.js');
 
-            //Diccionarios de los nombres y los titulos
-            const namesDic = {1:String(ImageData.name1), 2:String(ImageData.name2), 3:String(ImageData.name3), 4:String(ImageData.name4),
-            5:String(ImageData.name5), 6:String(ImageData.name6)};
+    //ES RECOMENDABLE QUE LAS IMAGENES TENGAN UNA RESOLUCION PEQUEÑA
 
-            const gamesDic = {1:String(ImageData.game1), 2:String(ImageData.game2), 3:String(ImageData.game3), 4:String(ImageData.game4),
-            5:String(ImageData.game5), 6:String(ImageData.game6)};
+        const ImageData = require('../../image_data.js');
 
-            const totalNumber = 6 //Numero total de waifus
-            const randomNumber = Math.floor(Math.random() * ((totalNumber + 1) - 1)) + 1;  //RNG
+        const totalNumber = 10 
+        const randomNumber = Math.floor(Math.random() * ((totalNumber + 0) - 1)) + 1;  //RNG
         
-            //Genera el embed de la waifu basada en el numero generado
         try{    
             const waifuMessage = new Discord.RichEmbed()
                 .setColor('#ff87d9')
                 .attachFiles([`./vgw/${randomNumber}.jpg`])
-                .setAuthor(`${namesDic[randomNumber]}`, `attachment://${randomNumber}.jpg`, '')
-                .setDescription(`${gamesDic[randomNumber]}`)
+                .setAuthor(`${ImageData.waifus[randomNumber].name}`, `attachment://${randomNumber}.jpg`, '')
+                .setDescription(`${ImageData.waifus[randomNumber].game}`)
                 .setImage(`attachment://${randomNumber}.jpg`)
                 .setFooter(`Waifu ${randomNumber}/${totalNumber}`);
             message.channel.send(waifuMessage);
@@ -34,7 +28,7 @@ module.exports.run = async(client, message, args) =>{
 
 module.exports.config = {
     name: 'waifu',
-    description: 'Muestra una waifu de videojuegos al azar',
+    description: 'Muestra una waifu de videojuegos al azar. Creditos a los respectivos artistas',
     category: 'diversion',
     guildOnly: true,
     cooldown: 8
