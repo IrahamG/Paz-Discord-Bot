@@ -5,12 +5,11 @@ module.exports.run = async(client, message, args) => {
             .setColor('#ff87d9')
             .setAuthor('Changelog', client.user.displayAvatarURL, '')
             .setThumbnail(client.user.displayAvatarURL)
-            .addField('Cambios en la version 0.8.0 | Codename: REX', 
-                `+Nuevos comandos: \`rps\`, y \`fortune\`. 
+            .addField('Cambios en la version 0.8.2 | Codename: REX', 
+                `+Nuevos comando: \`donate\`. 
                 \n+Cambios en el comando de \`waifu\`, otra vez.
-                \n+Cambios menores en otros comandos
-                \n+Nuevo sitio web: chaosneon.weebly.com
-                \n+Primer lanzamiento publico`)
+                \n+Cambios menores en otros comandos.`)
+            .addField('Para una lista completa de cambios visita:', '[Neon Bots](http://chaosneon.weebly.com)')
             .setFooter('ChaosNeon | 2019 - 2020');
         message.channel.send(changeMessage);
     }

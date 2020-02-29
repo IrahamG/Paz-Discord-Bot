@@ -15,7 +15,7 @@ module.exports.run = async(client, message, args) => {
                         message.delete();
 
                         let motivo = args.join(' ').slice(22);
-                        if(!motivo) motivo = 'Sin motivo aparente';
+                        if(!motivo) motivo = 'No se ha especificado un motivo';
                         const kickMessage = new Discord.RichEmbed()  //Creates an Embed Object 
                             //Customization options
                             .setColor('#ff87d9')

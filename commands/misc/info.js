@@ -5,7 +5,7 @@ module.exports.run = async(client, message, args) => {
             .setColor('#ff87d9')
             .setAuthor('Informacion tecnica de Paz', client.user.displayAvatarURL, '')
             .setThumbnail(client.user.displayAvatarURL)
-            .setDescription('Paz se encuentra actualmente en la versión 0.8.0')
+            .setDescription('Paz se encuentra actualmente en la versión 0.8.2')
             .addField('Codigo', `\`Lenguaje: Javascript \nLibreria: Node.js | Discord.js\``);
         message.channel.send(infoMessage);
     },
