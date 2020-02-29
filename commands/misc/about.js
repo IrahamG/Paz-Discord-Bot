@@ -6,8 +6,8 @@ module.exports.run = async(client, message, args) => {
             .setThumbnail(client.user.displayAvatarURL)
             .setDescription('Paz es un bot multifuncional, con el objetivo de añadirle funciones al servidor. Desde moderacion hasta diversion, Paz sigue creciendo cada dia.')
             .addField('Creador', 'ChaosNeon#1412', true)
-            .addField('Versión', 'REX - 0.8.0', true)
-            .addField('Sitio web', 'chaosneon.weebly.com', true)
+            .addField('Versión', 'REX - 0.8.2', true)
+            .addField('Sitio web', `[Neon Bots](http://chaosneon.weebly.com)`, true)
             .addField('Testers de Paz', `DantePelagatos#7716\n
             juandestructor#3954\n
             Tommcool_2020#8570\n

@@ -15,7 +15,7 @@ module.exports.run = async(client, message, args) => {
                         message.delete();
 
                         let motivo = args.join(' ').slice(22);
-                        if(!motivo) motivo = 'Sin motivo aparente';
+                        if(!motivo) motivo = 'No se ha especificado un motivo';
 
                         const banMessage = new Discord.RichEmbed()   //Embed constructor
                             .setColor('#ff87d9')

@@ -15,21 +15,20 @@ module.exports.run = async(client, message, args) => {
     //Regresa si la opcion no exsite
     if(answer != 'piedra' && answer != 'papel' && answer != 'tijeras') return message.channel.send('Me temo que esa opcion no existe')
 
-    message.delete();
 
     //Regresa el mensaje correspondiente dependiendo de cada resultado
     try {
         if(answer == botAnswer) {
             message.channel.send('Empate!');
         } else if (answer == 'piedra') {
-            if (botAnswer == 'papel') return message.channel.send('Papel. Victoria para mi!');
-            else return message.channel.send(`Tijeras. Victoria para ${message.author.username} :heart:!`);
+            if (botAnswer == 'papel') return message.channel.send('Papel :roll_of_paper: Victoria para mi!');
+            else return message.channel.send(`Tijeras :scissors: Victoria para ${message.author.username} :heart:!`);
         } else if (answer == 'papel') {
-            if (botAnswer == 'tijeras') return message.channel.send('Tijeras. Victoria para mi!');
-            else return message.channel.send(`Piedra. Victoria para ${message.author.username}! :heart:`);
+            if (botAnswer == 'tijeras') return message.channel.send('Tijeras :scissors: Victoria para mi!');
+            else return message.channel.send(`Piedra :new_moon: Victoria para ${message.author.username}! :heart:`);
         } else if (answer == 'tijeras') {
-            if (botAnswer == 'piedra') return message.channel.send('Piedra. Victoria para mi!');
-            else return message.channel.send(`Papel. Victoria para ${message.author.username}! :heart:`)
+            if (botAnswer == 'piedra') return message.channel.send('Piedra :new_moon: Victoria para mi!');
+            else return message.channel.send(`Papel :roll_of_paper: Victoria para ${message.author.username}! :heart:`)
         }
     } catch(error) {
         console.log(error)
