@@ -15,7 +15,7 @@ client.once('ready', () => {
     console.log('Ready!');
 
     let statuses = [
-        `En ${client.guilds.size}/10 servidores!`,
+        `En ${client.guilds.size}/25 servidores!`,
         `Usa paz!help para ver los comandos`,
         `${client.users.size} usuarios!`,
         `Versión 0.8.2 REX | paz!changelog`
