@@ -1,6 +1,11 @@
-const { prefix } = require('../../config.json')
+const Discord = require('discord.js');
+const { prefix } = require('../../config.json');
+const { Users, CurrencyShop } = require('../../dbObjects');
+const currency = new Discord.Collection();
+
 
 module.exports = async(client, message) => {
+
     if(message.author.bot || message.channel.type === "dm") return;
 
    let messageArray= message.content.split(' ');
