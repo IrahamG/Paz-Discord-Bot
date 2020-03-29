@@ -19,7 +19,7 @@ client.once('ready', async () => {
         `En ${client.guilds.size}/25 servidores!`,
         `Usa paz!help para ver los comandos`,
         `${client.users.size} usuarios!`,
-        `Versión 0.8.2 REX | paz!changelog`
+        `Versión 0.9.0 ZEKE | paz!changelog`
     ]
 
     setInterval(function() {

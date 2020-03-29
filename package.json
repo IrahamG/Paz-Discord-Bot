@@ -11,6 +11,7 @@
   "dependencies": {
     "dblapi.js": "^2.3.1",
     "discord.js": "^11.5.1",
+    "genius-lyrics": "^1.0.9",
     "giphy-js-sdk-core": "^1.0.6",
     "node-osu": "^2.2.0",
     "sequelize": "^5.21.5",
