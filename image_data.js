@@ -43,6 +43,26 @@
         {
             name: 'Cynthia',
             game: 'Pokemon D/P/PT'
+        },
+        {
+            name: 'Tifa Lockhart',
+            game: 'Final Fantasy VII'
+        },
+        {
+            name: 'D.Va',
+            game: 'Overwatch'
+        },
+        {
+            name: 'Mai Shiranui',
+            game: 'Fatal Fury Series'
+        },
+        {
+            name: 'Sonia',
+            game: 'Pokemon SW/SH',
+        },
+        {
+            name: 'Pyra',
+            game: 'Xenoblade Chronicles 2'
         }
 
     ]
