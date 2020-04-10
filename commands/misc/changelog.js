@@ -5,10 +5,9 @@ module.exports.run = async(client, message, args) => {
             .setColor('#ff87d9')
             .setAuthor('Changelog', client.user.displayAvatarURL, '')
             .setThumbnail(client.user.displayAvatarURL)
-            .addField('Cambios en la version 0.9.0 | Codename: ZEKE', 
-                `+Nuevos comandos: \`osu\`, \`lyrics\`. 
-                \n+Nuevas waifus añadidas.
-                \n+Cambios menores y correción de texto.`)
+            .addField('Cambios en la versión 0.9.1 | Codename: ZEKE', 
+                `+Correción de un bug en el comando \`say\`. 
+                \nCorreción de texto en algunos comandos.`)
             .addField('Para listas anteriores, visita:', '[Neon Bots](http://chaosneon.weebly.com)')
             .setFooter('ChaosNeon | 2019 - 2020');
         message.channel.send(changeMessage);
@@ -16,7 +15,7 @@ module.exports.run = async(client, message, args) => {
 
 module.exports.config = {
     name: 'changelog',
-    description: 'Muestra la lista de cambios de la version actual',
+    description: 'Muestra la lista de cambios de la versión actual',
     category: 'misc',
     cooldown: 5
 }

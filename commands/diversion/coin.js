@@ -10,21 +10,21 @@ module.exports.run = async(client, message, args) => {
                     var coinMessage = new Discord.RichEmbed()
                         .setColor('#ff87d9')
                         .setTitle('**Coinflip**')
-                        .setDescription('Cara!');
+                        .setDescription('¡Cara!');
                     message.channel.send(coinMessage);
                     break;
                 case 2:
                     var coinMessage = new Discord.RichEmbed()
                         .setColor('#ff87d9')
                         .setTitle('**Coinflip**')
-                        .setDescription('Cruz!');
+                        .setDescription('¡Cruz!');
                     message.channel.send(coinMessage);
                     break;
                 default:
                     break;
             }
         } catch (error) {
-            message.channel.send('Algo sucedio al lanzar la moneda');
+            message.channel.send('Algo sucedió al lanzar la moneda');
             console.log(error);
         }
     }
