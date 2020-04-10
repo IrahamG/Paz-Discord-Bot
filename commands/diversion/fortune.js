@@ -7,7 +7,8 @@ module.exports.run = async(client, message, args) => {
 
     //Posibles respuestas
     let fortuna = ['Sí', 'Efectivamente', 'Muy probablemente', 'Sin duda alguna', 'Tenlo por seguro', 'Probablemente',
-    'No lo creo', 'No es probable', 'Ni lo pienses', 'De ninguna manera', 'No, no y NO', 'YES YES YES!'];
+    'No lo creo', 'No es probable', 'Ni lo pienses', 'De ninguna manera', 'No, no y NO', 'YES YES YES!', 'pa k kieres saber eso jaja salu2',
+    'No creo que quieras saber', 'La respuesta ya la sabes'];
 
     //Generador de numero aleatorio
     let randomNumber = Math.floor(Math.random()* ((12 + 1) - 1)) + 1;
@@ -25,7 +26,7 @@ module.exports.run = async(client, message, args) => {
     } catch (error) {
 
     console.log(error)
-    message.channel.send('Algo sucedio al predecir la fortuna')
+    message.channel.send('Algo sucedió al predecir la fortuna')
 
     }
 

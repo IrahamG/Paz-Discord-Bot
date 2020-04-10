@@ -4,9 +4,9 @@ module.exports.run = async(client, message, args) => {
             .setColor('#ff87d9')
             .setAuthor('Acerca de Paz', client.user.displayAvatarURL, '')
             .setThumbnail(client.user.displayAvatarURL)
-            .setDescription('Paz es un bot multifuncional, con el objetivo de añadirle funciones al servidor. Desde moderacion hasta diversion, Paz sigue creciendo cada dia.')
-            .addField('Creador', 'ChaosNeon#1412', true)
-            .addField('Versión', 'ZEKE - 0.9.0', true)
+            .setDescription('Paz es un bot multifuncional, con el objetivo de añadirle funciones al servidor. Desde moderacion hasta diversión, Paz sigue creciendo cada dia.')
+            .addField('Creador', `\`ChaosNeon#1412\``, true)
+            .addField('Versión', 'ZEKE - 0.9.1', true)
             .addField('Sitio web', `[Neon Bots](http://chaosneon.weebly.com)`, true)
             .addField('Testers de Paz', `DantePelagatos#7716\n
             juandestructor#3954\n
@@ -20,7 +20,7 @@ module.exports.run = async(client, message, args) => {
 
 module.exports.config = {
     name: 'about',
-    description: 'Informacion acerca de Paz',
+    description: 'Información acerca de Paz',
     category: 'misc',
     cooldown: 5
 }

@@ -3,7 +3,8 @@ module.exports.run = async(client, message, args) => {
 
         if(!args[0]) return message.channel.send('Que quieres que diga?')
 
-        message.delete()
+        await message.delete();
+
         const texto = args.join(' ')  //Joins all the arguments with a space in between
         try {
             message.channel.send(texto)
@@ -18,6 +19,6 @@ module.exports.config = {
     description: 'Paz dice lo que tu quieras que diga',
     category: 'diversion',
     args: true,
-    usage: '<Dialogo>',
+    usage: '<Diálogo>',
     cooldown: 5
 }

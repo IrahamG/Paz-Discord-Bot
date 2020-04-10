@@ -4,7 +4,7 @@ module.exports.run = async(client, message, args) => {
 
         //Termina el proceso si el numero no es un dado valido y regresa el mensaje apropiado
         if(args[0] != '4' && args[0] != '6' && args[0] != '8' && args[0] != '10' && args[0] != '12' && args[0] != '20' && args[0] != '100') {
-            message.reply('Ese no es un numero valido de dado, consulta paz!help');
+            message.reply('Ese no es un número de dado valido, consulta paz!help');
         }
 
         let diceMessage = new Discord.RichEmbed()
@@ -36,7 +36,7 @@ module.exports.run = async(client, message, args) => {
             case '20':
                 var diceResult = Math.floor(Math.random() * (21 - 1)) + 1;
                 if(diceResult == 20) {
-                    diceMessage.setDescription('¡20! **¡Golpe critico!**');
+                    diceMessage.setDescription('¡20! **¡Golpe crítico!**');
                 } else {
                     diceMessage.setDescription(`El resultado del tiro es: ${diceResult}`);
                 }
@@ -54,9 +54,9 @@ module.exports.run = async(client, message, args) => {
 
 module.exports.config = {
     name: 'dice',
-    description: 'Lanza un dado de tu eleccion y obtén el resultado',
+    description: 'Lanza un dado de tu elección y obtén el resultado',
     category: 'diversion',
     args: true,
-    usage: '<Numero de caras (4/6/8/10/12/20)>',
+    usage: '<Número de caras (4/6/8/10/12/20)>',
     cooldown: 5
 }
