@@ -1,12 +1,16 @@
 const Discord = require('discord.js');
-const { prefix, token, dblToken } = require('./config.json');
+const { token, dblToken } = require('./config.json');
 const client = new Discord.Client();
-
+const DBL = require('dblapi.js');
+const dbl = new DBL(dblToken, client);
 
 
 ['commands', 'aliases'].forEach(x => client[x] = new Discord.Collection());
 ['console', 'commands', 'event'].forEach(x => require(`./handlers/${x}`)(client));
 
+dbl.on('posted', () => {
+    console.log('Server count posted');
+})
 
 client.once('ready', async () => {
     console.log('Ready!');
