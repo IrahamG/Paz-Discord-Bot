@@ -2,9 +2,11 @@
 const Discord = require('discord.js');
 module.exports.run = async(client, message, args) => {
 
+        if(!args[0]) return message.reply('No especificaste el número de caras');
+
         //Termina el proceso si el numero no es un dado valido y regresa el mensaje apropiado
         if(args[0] != '4' && args[0] != '6' && args[0] != '8' && args[0] != '10' && args[0] != '12' && args[0] != '20' && args[0] != '100') {
-            message.reply('Ese no es un número de dado valido, consulta paz!help');
+           return message.reply('Ese no es un número de dado valido, consulta paz!help');
         }
 
         let diceMessage = new Discord.RichEmbed()

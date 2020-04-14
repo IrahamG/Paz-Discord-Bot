@@ -6,7 +6,7 @@ module.exports.run = async(client, message, args) => {
 
         const ImageData = require('../../image_data.js');
 
-        const totalNumber = 15 
+        const totalNumber = 20
         const randomNumber = Math.floor(Math.random() * ((totalNumber + 0) - 1)) + 1;  //RNG
         
         if(!args[0]){
@@ -17,7 +17,7 @@ module.exports.run = async(client, message, args) => {
                     .setAuthor(`${ImageData.waifus[randomNumber].name}`, `attachment://${randomNumber}.jpg`, '')
                     .setDescription(`${ImageData.waifus[randomNumber].game}`)
                     .setImage(`attachment://${randomNumber}.jpg`)
-                    .setFooter(`Waifu ${randomNumber}/${totalNumber}`);
+                    .setFooter(`Waifu ${randomNumber}/${totalNumber} | Creditos a los respectivos artistas.`);
 
                 let msg = await message.channel.send(waifuMessage);
 
@@ -36,14 +36,14 @@ module.exports.run = async(client, message, args) => {
                     .setAuthor(`${ImageData.waifus[args[0]].name}`, `attachment://${args[0]}.jpg`, '')
                     .setDescription(`${ImageData.waifus[args[0]].game}`)
                     .setImage(`attachment://${args[0]}.jpg`)
-                    .setFooter(`Waifu ${args[0]}/${totalNumber}`);
+                    .setFooter(`Waifu ${args[0]}/${totalNumber} | Creditos a los respectivos artistas.`);
 
                 let msg = await message.channel.send(waifuMessage);
 
                 await msg.react('❤️');
                 await msg.react('💔');
             } catch (error) {
-                message.channel.send('¿Seguro que escribiste un numero?');
+                message.channel.send('¿Seguro que escribiste un número?');
                 console.log(error);
             }
         }      
@@ -53,6 +53,6 @@ module.exports.config = {
     name: 'waifu',
     description: 'Muestra una waifu de videojuegos al azar. Creditos a los respectivos artistas',
     category: 'diversion',
-    usage: 'Numero de una waifu especifica',
+    usage: '<Número de una waifu especifica>',
     cooldown: 8
 }

@@ -14,7 +14,7 @@ module.exports.run = async(client, message, args) => {
     let randomNumber = Math.floor(Math.random()* ((12 + 1) - 1)) + 1;
     let pregunta = args.join(' ');
 
-    
+    await message.delete();
 
     //Envia el mensaje de fortuna con el mensaje aleatorio
     try {
@@ -30,7 +30,6 @@ module.exports.run = async(client, message, args) => {
 
     }
 
-    message.delete();
 
 }
 
