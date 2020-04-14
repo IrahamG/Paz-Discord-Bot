@@ -32,13 +32,13 @@ module.exports.run = async(client, message, args) => {
         }
     } catch(error) {
         console.log(error)
-        message.channel.send('Algo sucedio con la partida, lo siento')
+        message.channel.send('Algo sucedió con la partida, lo siento')
     }
 }
 
 module.exports.config = {
     name: 'rps',
-    description: 'Juega piedra papel o tijera con Paz',
+    description: 'Juega piedra papel o tijeras contra Paz',
     usage: '<Piedra, papel o tijeras>',
     category: 'diversion'
 }

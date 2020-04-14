@@ -63,6 +63,26 @@
         {
             name: 'Pyra',
             game: 'Xenoblade Chronicles 2'
+        },
+        {
+            name: 'Makoto Niijima',
+            game: 'Persona 5'
+        },
+        {
+            name: 'Rosalina',
+            game: 'Super Mario Galaxy'
+        },
+        {
+            name: 'Elizabeth',
+            game: 'Bioshock Infinite'
+        },
+        {
+            name: '2B',
+            game: 'Nier: Automata'
+        },
+        {
+            name: 'Monika',
+            game: 'Doki Doki Literature Club'
         }
 
     ]

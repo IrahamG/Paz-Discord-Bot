@@ -16,10 +16,11 @@ client.once('ready', async () => {
     console.log('Ready!');
 
     let statuses = [
-        `En ${client.guilds.size}/25 servidores!`,
+        `Sirviendo a ${client.guilds.size} servidores!`,
         `Usa paz!help para ver los comandos`,
         `${client.users.size} usuarios!`,
-        `Versión 0.9.1 ZEKE | paz!changelog`
+        `Versión 1.0.1 ZEKE | paz!changelog`,
+        `¡Comparte con tus amigos y da a conocer a Paz!`
     ]
 
     setInterval(function() {

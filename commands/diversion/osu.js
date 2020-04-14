@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const osu = require('node-osu');
 
+//Constructor del objeto de osuApi
 const osuApi = new osu.Api('309b672b1b06678bcc5155eae909e49f38e754f8' , {
     notFoundAsError: false,
     completeScores: false,
@@ -9,14 +10,15 @@ const osuApi = new osu.Api('309b672b1b06678bcc5155eae909e49f38e754f8' , {
 
 module.exports.run = async(client, message, args) => {
 
-    if(!args[0]) return message.reply('no has proporcionado un usuario');
-    if(!args[1]) return message.reply('no has proporcionado modo de juego');
+    if(!args[0]) return message.channel.send('No has proporcionado un usuario');
+    if(!args[1]) return message.channel.send('No has proporcionado modo de juego');
 
     let usu = args[0];
     let modeS = args[1].toLowerCase();
     let mode = 0;
     let modeT = '';
 
+    //Cambia las variables de mode y modeT dependiendo de lo que el usuario haya puesto como parametro
     switch(modeS) {
         case 'std':
             mode = 0;
@@ -35,7 +37,7 @@ module.exports.run = async(client, message, args) => {
             modeT = 'osu! Mania';
             break;
         default:
-            return message.reply('no se encontró ese modo de juego, si tienes dudas usa paz!help');
+            return message.channel.send('No se encontró ese modo de juego, si tienes dudas usa paz!help');
     }
 
     osuApi.getUser({ u: usu, m: mode }).then(user => {
@@ -64,11 +66,11 @@ module.exports.run = async(client, message, args) => {
                 .addField(`**S**`, `${user.counts.S}`, true)
                 .addField(`*A*`, `${user.counts.A}`, true)
                 .addField(`Corazón`, `:heart:`, true)
-                .setFooter(`Luce bien! Gran trabajo, sigue asi!`);
+                .setFooter(`Luce bien! Gran trabajo, sigue asi! :heart:`);
 
             message.channel.send(usuMessage);
         } catch(error) {
-            message.reply('el usuario no fue encontrado')
+            message.channel.send('El usuario no fue encontrado')
             console.log(error);
         }
     });

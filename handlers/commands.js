@@ -11,5 +11,5 @@ module.exports = (client) => {
         }
     }
 
-    ['diversion', 'misc', 'moderacion', 'owner'].forEach(x => load(x))
+    ['diversion', 'misc', 'moderacion', 'premium', 'reacciones'].forEach(x => load(x))
 }
