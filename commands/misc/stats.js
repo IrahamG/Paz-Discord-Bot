@@ -9,7 +9,7 @@ module.exports.run = async(client, message, args) => {
         .addField('Total de servidores', `${client.guilds.size}`)
         .addField('Total de usuarios', `${client.users.size}`)
         .setFooter('ChaosNeon | 2019 - 2020');
-    messagce.channel.send(statMessage);
+    message.channel.send(statMessage);
 
 }
 
