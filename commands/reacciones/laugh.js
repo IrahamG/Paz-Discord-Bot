@@ -9,7 +9,7 @@ module.exports.run = async(client, message, args) => {
 
     giphy.search({
         "q": "laugh, anime",
-        "limit" : 25
+        "limit" : 35
      }, function (err, res) {
         let totalR = res.data.length;
         let respIndex = Math.floor((Math.random() * 10) + 1) % totalR;

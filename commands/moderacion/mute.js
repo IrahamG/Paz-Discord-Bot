@@ -10,7 +10,7 @@ module.exports.run = async(client, message, args) => {
     if(!mutee) return message.channel.send('Por favor introduzca un usuario');
 
     let motivo = args.slice(1).join(' ');
-    if(!motivo) motivo = 'No se ha especificado un motvio';
+    if(!motivo) motivo = 'No se ha especificado un motivo';
 
     let muterole = message.guild.roles.find(r => r.name === 'Silenciado')
     if(!muterole) {
