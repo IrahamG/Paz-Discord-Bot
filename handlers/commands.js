@@ -1,4 +1,3 @@
-const { Users, CurrencyShop } = require('../dbObjects');
 const { readdirSync } = require('fs');
 
 module.exports = (client) => {
