@@ -19,8 +19,8 @@ client.once('ready', async () => {
         `En ${client.guilds.size} servidores!`,
         `Usa paz!help para ver los comandos`,
         `${client.users.size} usuarios!`,
-        `Versión 1.0.1 ZEKE | paz!changelog`,
-        `Visita nuestro sitio web | paz!about`
+        `Versión 1.0.2 ZEKE | paz!changelog`,
+        `Visita nuestro sitio web | paz!info`
     ]
 
     setInterval(function() {

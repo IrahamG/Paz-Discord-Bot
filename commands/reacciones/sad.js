@@ -4,12 +4,12 @@ const Discord = require('discord.js');
 
 module.exports.run = async(client, message, args) => {
 
-    let mensajes = ['está triste', 'se siente desanimado', 'tiene el bajón', 'se siente triste', 'está melancolico'];
+    let mensajes = ['está sad', 'se siente desanimad@', 'llora', 'se siente triste', 'se siente sad'];
     let rng = Math.floor(Math.random() * 5);
 
     giphy.search({
         "q": "sad, anime",
-        "limit" : 25
+        "limit" : 35
     }, function (err, res) {
         let totalR = res.data.length;
         let respIndex = Math.floor(Math.random() * 10 + 1) % totalR;

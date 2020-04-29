@@ -3,15 +3,15 @@ const Discord = require('discord.js');
 module.exports.run = async(client, message, args) => {
 
     //Envia la advertencia en caso de no haber proporcionado una pregunta
-    if(!args[0]) return message.channel.send('No has proporcionado una pregunta');
+    if(!args[0]) return message.channel.send('No escribiste tu pregunta');
 
     //Posibles respuestas
-    let fortuna = ['Sí', 'Efectivamente', 'Muy probablemente', 'Sin duda alguna', 'Tenlo por seguro', 'Probablemente',
-    'No lo creo', 'No es probable', 'Ni lo pienses', 'De ninguna manera', 'No, no y NO', 'YES YES YES!', 'pa k kieres saber eso jaja salu2',
-    'No creo que quieras saber', 'La respuesta ya la sabes'];
+    let fortuna = ['Yep', 'Efectivamente', 'Muy probablemente', 'Sin duda alguna', 'Tenlo por seguro', 'Probablemente',
+    'No lo creo', 'No es probable', 'Nah', 'De ninguna manera', 'No, no y NO', 'YES YES YES!', 'pa k kieres saber eso jaja salu2',
+    'No creo que quieras saber', 'La respuesta ya la sabes', '¿En serio me preguntaste eso?', 'Ooooh si'];
 
     //Generador de numero aleatorio
-    let randomNumber = Math.floor(Math.random()* ((12 + 1) - 1)) + 1;
+    let randomNumber = Math.floor(Math.random()* ((16 + 1) - 1)) + 1;
     let pregunta = args.join(' ');
 
     await message.delete();
@@ -35,7 +35,7 @@ module.exports.run = async(client, message, args) => {
 
 module.exports.config = {
     name: 'fortune',
-    description: 'Predice la fortuna con una pregunta de si y no',
+    description: 'Paz contesta tus interrogantes',
     category: 'diversion',
     usage: '<Pregunta>'
 }

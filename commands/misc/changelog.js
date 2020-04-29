@@ -5,13 +5,12 @@ module.exports.run = async(client, message, args) => {
             .setColor('#ff87d9')
             .setAuthor('Changelog', client.user.displayAvatarURL, '')
             .setThumbnail(client.user.displayAvatarURL)
-            .addField('Cambios en la versión 1.0.1 | Codename: ZEKE', 
-                `+Nuevos comandos: \`jontron\`, \`happy\`, \`sad\`, \`angry\`, \`laugh\`.\n
-                +Nuevo comando premium: \`gif\`.\n
-                +Nuevas waifus añadidas al comando waifu.\n
-                +Cambios en los textos de algunos comandos. Correciones ortográficas.\n
-                +Nuevas categorias: Reacciones y Comandos premium.`)
-            .addField('Para listas anteriores, visita:', '[Neon Bots](http://chaosneon.weebly.com)')
+            .addField('Cambios en la versión 1.0.2 | Codename: ZEKE', 
+                `+Nuevo comando: \`stats\`.\n
+                +Cambios al comando: \`fortune\`.\n
+                +Cambios en las descripciones.\n
+                +Correciones ortográficas.`)
+            .addField('Para listas anteriores, visita:', '[TBH](http://chaosneon.weebly.com)')
             .setFooter('ChaosNeon | 2019 - 2020');
         message.channel.send(changeMessage);
     }
