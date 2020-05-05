@@ -5,10 +5,9 @@ module.exports.run = async(client, message, args) => {
             .setColor('#ff87d9')
             .setAuthor('Changelog', client.user.displayAvatarURL, '')
             .setThumbnail(client.user.displayAvatarURL)
-            .addField('Cambios en la versión 1.0.2 | Codename: ZEKE', 
-                `+Nuevo comando: \`stats\`.\n
-                +Cambios al comando: \`fortune\`.\n
-                +Cambios en las descripciones.\n
+            .addField('Cambios en la versión 1.0.3 | Codename: ZEKE', 
+                `+Nuevo comando: \`husbando\` (Por demanda popular).\n
+                +Nuevas waifus añadidas\n
                 +Correciones ortográficas.`)
             .addField('Para listas anteriores, visita:', '[TBH](http://chaosneon.weebly.com)')
             .setFooter('ChaosNeon | 2019 - 2020');

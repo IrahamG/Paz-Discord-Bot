@@ -7,7 +7,7 @@ module.exports.run = async(client, message, args) => {
             .setThumbnail(client.user.displayAvatarURL)
             .setDescription('Paz es un bot multifuncional, con el objetivo de añadirle funciones al servidor. Desde moderacion hasta diversión, Paz sigue creciendo cada dia.')
             .addField('Creador', `\`ChaosNeon#1412\``, true)
-            .addField('Versión', 'ZEKE - 1.0.2', true)
+            .addField('Versión', 'ZEKE - 1.0.3', true)
             .addField('Sitio web', `[TBH](http://chaosneon.weebly.com)`, true)
             .addField('Código', `\`Lenguaje: Javascript \nLibreria: Node.js | Discord.js\``)
             .addField('Testers de Paz', `\`DantePelagatos#7716\`\n

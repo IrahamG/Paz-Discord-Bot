@@ -83,6 +83,53 @@
         {
             name: 'Monika',
             game: 'Doki Doki Literature Club'
+        },
+        {
+            name: 'Futaba Sakura',
+            game: 'Persona 5'
+        },
+        {
+            name: 'Bayonetta',
+            game: 'Bayonetta Series'
+        },
+        {
+            name: 'Jill Valentine',
+            game: 'Resident Evil Series'
+        },
+        {
+            name: 'Lightning',
+            game: 'Final Fantasy XIII'
+        },
+        {
+            name: 'Elena Fisher',
+            game: 'Uncharted Series'
+        }
+
+    ],
+    husbandos : [
+        {
+            name: 'null',
+            game: 'null'
+        },
+        {
+            name: 'Alucard',
+            game: 'Castlevania Series'
+        },
+        {
+            name: 'Nathan Drake',
+            game: 'Uncharted Series'
+        },
+        {
+            name: 'Kayn',
+            game: 'League of Legends'
+        },
+        {
+            name: 'Sephiroth',
+            game: 'Final Fantasy VII'
+        },
+        {
+            name: 'Leon Kennedy',
+            game: 'Resident Evil Series'
         }
 
     ]
