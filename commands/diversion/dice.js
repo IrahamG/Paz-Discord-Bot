@@ -14,44 +14,49 @@ module.exports.run = async(client, message, args) => {
             .setTitle(`Dado de ${args[0]} caras :game_die:`)
 
         //Regresa un mensaje por cada opcion de dado
-        switch (args[0]) {
-            case '4':
-                var diceResult = Math.floor(Math.random() * (5 - 1)) + 1;
-                diceMessage.setDescription(`El resultado del tiro es: ${diceResult}`);
-                break;
-            case '6':
-                var diceResult = Math.floor(Math.random() * (7 - 1)) + 1;
-                diceMessage.setDescription(`El resultado del tiro es: ${diceResult}`);
-                break;
-            case '8':
-                var diceResult = Math.floor(Math.random() * (9 - 1)) + 1;
-                diceMessage.setDescription(`El resultado del tiro es: ${diceResult}`);
-                break;
-            case '10':
-                var diceResult = Math.floor(Math.random() * (11 - 1)) + 1;
-                diceMessage.setDescription(`El resultado del tiro es: ${diceResult}`);
-                break;
-            case '12':
-                var diceResult = Math.floor(Math.random() * (13 - 1)) + 1;
-                diceMessage.setDescription(`El resultado del tiro es: ${diceResult}`);
-                break;
-            case '20':
-                var diceResult = Math.floor(Math.random() * (21 - 1)) + 1;
-                if(diceResult == 20) {
-                    diceMessage.setDescription('¡20! **¡Golpe crítico!**');
-                } else {
+        try{
+            switch (args[0]) {
+                case '4':
+                    var diceResult = Math.floor(Math.random() * (5 - 1)) + 1;
                     diceMessage.setDescription(`El resultado del tiro es: ${diceResult}`);
-                }
-                break;
-            case '100':
-                var diceResult = Math.floor(Math.random() * (101 - 1)) + 1;
-                diceMessage.setDescription(`El resultado del tiro es: ${diceResult}`);
-                break;
-            default:
-                break;
-        }
+                    break;
+                case '6':
+                    var diceResult = Math.floor(Math.random() * (7 - 1)) + 1;
+                    diceMessage.setDescription(`El resultado del tiro es: ${diceResult}`);
+                    break;
+                case '8':
+                    var diceResult = Math.floor(Math.random() * (9 - 1)) + 1;
+                    diceMessage.setDescription(`El resultado del tiro es: ${diceResult}`);
+                    break;
+                case '10':
+                    var diceResult = Math.floor(Math.random() * (11 - 1)) + 1;
+                    diceMessage.setDescription(`El resultado del tiro es: ${diceResult}`);
+                    break;
+                case '12':
+                    var diceResult = Math.floor(Math.random() * (13 - 1)) + 1;
+                    diceMessage.setDescription(`El resultado del tiro es: ${diceResult}`);
+                    break;
+                case '20':
+                    var diceResult = Math.floor(Math.random() * (21 - 1)) + 1;
+                    if(diceResult == 20) {
+                        diceMessage.setDescription('¡20! **¡Golpe crítico!**');
+                    } else {
+                        diceMessage.setDescription(`El resultado del tiro es: ${diceResult}`);
+                    }
+                    break;
+                case '100':
+                    var diceResult = Math.floor(Math.random() * (101 - 1)) + 1;
+                    diceMessage.setDescription(`El resultado del tiro es: ${diceResult}`);
+                    break;
+                default:
+                    break;
+            }
 
-        message.channel.send(diceMessage);
+            message.channel.send(diceMessage);
+        }catch(error) {
+            message.channel.send('Algo sucedio al lanzar el dado')
+            console.log(error);
+        }
     }
 
 module.exports.config = {

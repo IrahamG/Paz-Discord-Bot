@@ -8,10 +8,10 @@ module.exports.run = async(client, message, args) => {
     //Posibles respuestas
     let fortuna = ['Yep', 'Efectivamente', 'Muy probablemente', 'Sin duda alguna', 'Tenlo por seguro', 'Probablemente',
     'No lo creo', 'No es probable', 'Nah', 'De ninguna manera', 'No, no y NO', 'YES YES YES!', 'pa k kieres saber eso jaja salu2',
-    'No creo que quieras saber', 'La respuesta ya la sabes', '¿En serio me preguntaste eso?', 'Ooooh si'];
+    'No creo que quieras saber', 'La respuesta ya la sabes', '¿En serio me preguntaste eso?', 'Ooooh si', 'Por supuesto', 'Afirmativo'];
 
     //Generador de numero aleatorio
-    let randomNumber = Math.floor(Math.random()* ((16 + 1) - 1)) + 1;
+    let randomNumber = Math.floor(Math.random()* ((18 + 1) - 1)) + 1;
     let pregunta = args.join(' ');
 
     await message.delete();

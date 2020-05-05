@@ -6,7 +6,7 @@ module.exports.run = async(client, message, args) => {
 
         const ImageData = require('../../image_data.js');
 
-        const totalNumber = 20
+        const totalNumber = 25
         const randomNumber = Math.floor(Math.random() * ((totalNumber + 0) - 1)) + 1;  //RNG
         
         if(!args[0]){
